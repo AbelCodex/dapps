@@ -8,11 +8,10 @@
 image:
   file: Dockerfile
 
-tasks:
-  - command: |
-      chmod +x ./gradlew
-      chmod +x ./mvnw
-      bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
-      ./gradlew build"
-  - command: ./gradlew bootRun
+tasks:  
+- command: |
+   chmod +x ./gradlew
+   bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
+   ./gradlew build"
+ - command: ./gradlew bootRun
 
