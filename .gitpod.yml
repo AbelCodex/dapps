@@ -7,10 +7,9 @@
 image:
   file: Dockerfile
 
-tasks:  
+tasks:
   - command: |
-      chmod +x ./gradlew
-      bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
-      ./gradlew build"
-  - command: ./gradlew bootRun
+      chmod +x ./mvnw
+      ./mvnw install
+  - command: ./mvnw spring-boot:run
 
